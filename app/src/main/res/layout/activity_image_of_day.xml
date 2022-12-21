@@ -1,0 +1,75 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ImageOfDayActivity">
+
+    <TextView
+        android:id="@+id/btnPickDate"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:text="@string/select_date_to_search_picture_of_day"
+        android:paddingStart="5dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:drawablePadding="5dp"
+        android:focusable="false"
+        android:background="@drawable/edit_text_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/image_of_the_day"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/btnPickDate"
+        app:layout_constraintTop_toBottomOf="@+id/btnSearch"/>
+
+    <ImageView
+        android:id="@+id/btnFav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_favorite_24"
+        android:layout_marginStart="10dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/textView2"/>
+
+    <TextView
+        android:id="@+id/tvLink"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="#F44336"
+        android:autoLink="web"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintVertical_bias="0.05"
+        android:textStyle="italic|bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnPickDate"
+        app:layout_constraintStart_toStartOf="@+id/btnPickDate"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/purple_700"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPickDate"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
